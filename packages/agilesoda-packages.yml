@@ -1,0 +1,30 @@
+generated: '2026-09-12'
+method: searched
+source: >-
+  npm registry search, PyPI, crates.io, the github.com/AgileSoda organization and the
+  agilesoda.ai / docs.agilesoda.ai product pages, probed 2026-09-12
+package_count: 0
+packages: []
+note: >-
+  No first-party AgileSoDA client library was found in any public registry. The npm registry
+  search API returns 0 results for "agilesoda"; PyPI returns 404 for agilesoda, sparklingsoda,
+  bakingsoda, twinreader, modelservant and twindoc; crates.io returns 0. The company's GitHub
+  organization (github.com/AgileSoda, created 2023-05-04) holds three public repositories —
+  metaflow ("Applying Metaflow to JustType", a fork of Netflix Metaflow), ready_made_address_lottemembers
+  and Persona — none of which is a distributed SDK, and none pushed since 2023. AgileSoDA ships
+  SparklingSoDA, BakingSoDA, TwinDoc, TwinReader and ModelServant as licensed enterprise software
+  installed in the customer's own environment, so any client bindings are delivered with the product
+  rather than published to a registry. No SDKs pointer is emitted.
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=agilesoda
+  result: 0 matches
+- registry: pypi
+  query: https://pypi.org/pypi/{agilesoda,sparklingsoda,bakingsoda,twinreader,modelservant,twindoc}/json
+  result: 404 on every name
+- registry: crates.io
+  query: https://crates.io/api/v1/crates?q=agilesoda
+  result: 0 matches
+- registry: github
+  query: https://api.github.com/orgs/AgileSoda/repos
+  result: 3 public repos, none an SDK

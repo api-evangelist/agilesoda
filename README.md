@@ -1,4 +1,4 @@
-# Agilesoda
+# AgileSoDA
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,51 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Agilesoda is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/agilesoda
+AgileSoDA (애자일소다) is a Seoul-based enterprise AI software company founded in April 2015, whose name
+combines "Agility" with "Software Defined AI". It builds agentic AI systems that automate and optimize
+complex business decisions for Korean enterprises across insurance, banking, manufacturing and the
+public sector, and was named a Gartner Cool Vendor in 2024.
+
+Its current line is organized around the **JT (Just Type)** platform — JT Foundry for deploying and
+operating agents, JT Solution, Agentic OCR (ETL with VLM), Agentic RAG, Agentic Ops, the insurance
+document extractor InsuDoc, Ground Forge for automated data annotation, and a vibe-coding UI Package.
+Earlier products still carried on the documentation portal are SparklingSoDA, BakingSoDA
+(reinforcement-learning decision agents), TwinDoc, TwinReader (OCR) and ModelServant.
+
+## API surface
+
+**No public API contract was found.** AgileSoDA sells licensed enterprise software installed in the
+customer's own environment, so there is no hosted base URL, no self-service signup, no API key issuance
+and no published pricing — every commercial path on the site is a contact form.
+
+The company *does* publish a product documentation portal at
+[docs.agilesoda.ai](http://docs.agilesoda.ai/agiledocs_ko). Its index is public and lists an
+Installation Guide, Admin Guide, Getting Started, Developer's Guide and Use Cases Book for each product,
+plus a **ModelServant API Guide** and a Server Spec Guide. Every one of those linked guides returns the
+portal's username/password sign-on form instead of content, which is why this profile is recorded as
+`gated / customer-only-docs`: the contract exists, but only customers can read it.
+
+Contract discovery run 2026-09-12 against `agilesoda.ai`, `www.agilesoda.ai` and `docs.agilesoda.ai`:
+
+| Probe | Result |
+|---|---|
+| `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/v1/openapi.json`, `/api-docs`, `/v2/api-docs`, `/docs`, `/redoc`, `/rapidoc`, `/swagger-ui.html`, `/api/openapi.json` | 404 on every host |
+| `/graphql` introspection | 404 |
+| `/mcp`, `/.well-known/mcp.json` | 404 |
+| `/.well-known/agent-card.json`, `/.well-known/agent.json` | 404 — no agent card, so none is authored |
+| Named `/.well-known/` + `/apis.json` path list | 404 on every path, every host (see `well-known/`) |
+| npm / PyPI / crates.io / GitHub org | no first-party SDK published |
+| Pricing page | `https://agilesoda.ai/pricing` → 404 |
+
+One security note worth passing on: `docs.agilesoda.ai` has port 443 closed and serves the portal —
+including its credential login form — only over plaintext HTTP. Recorded in
+`security/agilesoda-domain-security.yml`.
+
+## Links
+
+- Website — https://agilesoda.ai/
+- Documentation portal — http://docs.agilesoda.ai/agiledocs_ko
+- GitHub organization — https://github.com/AgileSoda
+- Contact / demo request — https://agilesoda.ai/contact
+- Investor relations — https://agilesoda.ai/ir
+- LinkedIn — https://www.linkedin.com/company/agilesoda

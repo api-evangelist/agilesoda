@@ -1,17 +1,37 @@
 aid: agilesoda
-name: Agilesoda
-description: 'Agilesoda is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AgileSoDA
+description: >-
+  AgileSoDA (애자일소다) is a Seoul-based enterprise AI software company founded in April 2015, whose
+  name combines "Agility" with "Software Defined AI". It builds agentic AI systems that automate and
+  optimize complex business decisions for Korean enterprises across insurance, banking, manufacturing
+  and the public sector. Its current line is organized around the JT (Just Type) platform — JT Foundry
+  for deploying and operating agents, JT Solution, Agentic OCR (ETL with VLM), Agentic RAG, Agentic Ops,
+  the insurance-document extractor InsuDoc, Ground Forge for automated data annotation and a vibe-coding
+  UI Package — alongside earlier products SparklingSoDA, BakingSoDA (reinforcement-learning decision
+  agents), TwinDoc, TwinReader OCR and ModelServant. The company was named a Gartner Cool Vendor in 2024.
+  Software is delivered as licensed, customer-deployed enterprise systems rather than a public cloud API:
+  AgileSoDA publishes a product documentation portal at docs.agilesoda.ai that includes a ModelServant
+  API Guide and per-product Developer's Guides, but every guide sits behind a login, and no public
+  OpenAPI, SDK, package or self-service developer program was found.
+image: https://agilesoda.ai/images/logo/logo_OG.png
 url: https://raw.githubusercontent.com/api-evangelist/agilesoda/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
 created: '2026-09-12'
 modified: '2026-09-12'
+specificationVersion: '0.20'
 tags:
 - Company
+- Artificial Intelligence
+- AI Agents
+- Machine Learning
+- Enterprise Software
+- Document Processing
+- Optical Character Recognition
+- Retrieval Augmented Generation
+- Reinforcement Learning
+- Insurance
+- South Korea
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,57 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/agilesoda-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/agilesoda
+  url: https://agilesoda.ai/
+- type: Documentation
+  url: http://docs.agilesoda.ai/agiledocs_ko
+- type: GitHubOrganization
+  url: https://github.com/AgileSoda
+- type: Support
+  url: https://agilesoda.ai/contact
+- type: LinkedIn
+  url: https://www.linkedin.com/company/agilesoda
+- type: Careers
+  url: https://agilesoda.ai/company?tab=careers
+- type: News
+  url: https://agilesoda.ai/resources?tab=news
+- type: InvestorRelations
+  url: https://agilesoda.ai/ir
+- type: LegalNotice
+  url: https://agilesoda.ai/ethics
+- type: LLMsTxt
+  url: llms/agilesoda-llms.txt
+- type: Packages
+  url: packages/agilesoda-packages.yml
+- type: Plans
+  url: plans/agilesoda-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/agilesoda-rate-limits.yml
+
+x-enrichment:
+  date: '2026-09-12'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    AgileSoDA's documentation portal at docs.agilesoda.ai publicly lists a ModelServant "API Guide"
+    and a Developer's Guide for each of its five documented products, but every one of those pages
+    returns the portal's username/password sign-on form instead of content, so the only API contract
+    the company publishes is readable only by existing customers.
+  evidence:
+  - url: http://docs.agilesoda.ai/agiledocs_ko
+    status: 200
+  - url: http://docs.agilesoda.ai/msvt_api_v100
+    status: 200
+  - url: http://docs.agilesoda.ai/twreader_develop_v220
+    status: 200
+  - url: https://agilesoda.ai/openapi.json
+    status: 404
+  - url: https://agilesoda.ai/.well-known/agent-card.json
+    status: 404
+  checked: '2026-09-12'

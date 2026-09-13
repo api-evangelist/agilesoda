@@ -1,0 +1,19 @@
+generated: '2026-09-12'
+method: searched
+source: https://agilesoda.ai/
+plan_count: 0
+plans: []
+note: >-
+  AgileSoDA publishes no pricing page and no plan tiers. The site has no /pricing route; every
+  commercial call to action on agilesoda.ai routes to a contact form — "데모 신청하기" (request a demo)
+  at https://agilesoda.ai/contact?from=demo and "상담 문의하기" (request a consultation) at
+  https://agilesoda.ai/contact. The products are sold as enterprise licences and AI consulting /
+  systems-integration engagements, so price is quoted per engagement. Recorded as an explicit
+  zero rather than omitted: this is a contact-sales-only commercial surface, not an unchecked one.
+evidence:
+- url: https://agilesoda.ai/
+  status: 200
+- url: https://agilesoda.ai/contact
+  status: 200
+- url: https://agilesoda.ai/pricing
+  status: 404

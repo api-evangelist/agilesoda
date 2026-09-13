@@ -1,0 +1,21 @@
+generated: '2026-09-12'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: agilesoda.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 31 23:59:59 2026 GMT
+  hsts: false
+- host: docs.agilesoda.ai
+  https: false
+  note: >-
+    Port 443 is closed/filtered; the documentation portal is served only over plaintext HTTP
+    (http://docs.agilesoda.ai/agiledocs_ko) and its per-guide login form posts credentials to
+    /r/signon/login over that same unencrypted channel. Probed 2026-09-12.
+domains:
+- domain: agilesoda.ai
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

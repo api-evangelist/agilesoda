@@ -1,0 +1,20 @@
+generated: '2026-09-12'
+method: searched
+source: http://docs.agilesoda.ai/agiledocs_ko
+limit_count: 0
+rate_limits: []
+response_headers: []
+note: >-
+  No published rate limits. AgileSoDA exposes no public, self-service API: the only API
+  documentation it publishes is the ModelServant "API Guide" (http://docs.agilesoda.ai/msvt_api_v100)
+  and the per-product Developer's Guides on the same portal, and every one of them returns a
+  username/password login form instead of content. Because the products are installed in the
+  customer's own environment, any throughput ceiling is a deployment sizing question (the portal
+  carries a separate "Server Spec Guide") rather than a published per-key quota. Recorded as an
+  honest zero — undocumented, not unchecked.
+evidence:
+- url: http://docs.agilesoda.ai/agiledocs_ko
+  status: 200
+- url: http://docs.agilesoda.ai/msvt_api_v100
+  status: 200
+  body: login form (agileSoDA Documents sign-on), not the API guide
