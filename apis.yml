@@ -24,7 +24,7 @@ tags:
 - Company
 - Artificial Intelligence
 - AI Agents
-- Machine-Learning
+- Machine Learning
 - Enterprise Software
 - Document Processing
 - Optical Character Recognition
@@ -44,6 +44,7 @@ tags_raw:
 - Reinforcement Learning
 - Insurance
 - South Korea
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane
