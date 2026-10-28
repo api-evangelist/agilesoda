@@ -64,51 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AgileSoDA (애자일소다) is a Seoul-based enterprise AI software company founded in April 2015, whose name
-combines "Agility" with "Software Defined AI". It builds agentic AI systems that automate and optimize
-complex business decisions for Korean enterprises across insurance, banking, manufacturing and the
-public sector, and was named a Gartner Cool Vendor in 2024.
+AgileSoDA (애자일소다) is a Seoul-based enterprise AI software company founded in April 2015, whose name combines "Agility" with "Software Defined AI". It builds agentic AI systems that automate and optimize complex business decisions for Korean enterprises across insurance, banking, manufacturing and the public sector. Its current line is organized around the JT (Just Type) platform — JT Foundry for deploying and operating agents, JT Solution, Agentic OCR (ETL with VLM), Agentic RAG, Agentic Ops, the insurance-document extractor InsuDoc, Ground Forge for automated data annotation and a vibe-coding UI Package — alongside earlier products SparklingSoDA, BakingSoDA (reinforcement-learning decision agents), TwinDoc, TwinReader OCR and ModelServant. The company was named a Gartner Cool Vendor in 2024. Software is delivered as licensed, customer-deployed enterprise systems rather than a public cloud API: AgileSoDA publishes a product documentation portal at docs.agilesoda.ai that includes a ModelServant API Guide and per-product Developer's Guides, but every guide sits behind a login, and no public OpenAPI, SDK, package or self-service developer program was found.
 
-Its current line is organized around the **JT (Just Type)** platform — JT Foundry for deploying and
-operating agents, JT Solution, Agentic OCR (ETL with VLM), Agentic RAG, Agentic Ops, the insurance
-document extractor InsuDoc, Ground Forge for automated data annotation, and a vibe-coding UI Package.
-Earlier products still carried on the documentation portal are SparklingSoDA, BakingSoDA
-(reinforcement-learning decision agents), TwinDoc, TwinReader (OCR) and ModelServant.
+**Areas:** Company · Artificial Intelligence · AI Agents · Machine Learning · Enterprise Software · Document Processing · Optical Character Recognition · RAG · Reinforcement Learning · Insurance · South Korea
 
-## API surface
+## AgileSoDA on APIs.io
 
-**No public API contract was found.** AgileSoDA sells licensed enterprise software installed in the
-customer's own environment, so there is no hosted base URL, no self-service signup, no API key issuance
-and no published pricing — every commercial path on the site is a contact form.
+Everything profiled for AgileSoDA is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agilesoda/](https://apis.io/providers/agilesoda/)** — or go straight to one of the APIs or properties below.
 
-The company *does* publish a product documentation portal at
-[docs.agilesoda.ai](http://docs.agilesoda.ai/agiledocs_ko). Its index is public and lists an
-Installation Guide, Admin Guide, Getting Started, Developer's Guide and Use Cases Book for each product,
-plus a **ModelServant API Guide** and a Server Spec Guide. Every one of those linked guides returns the
-portal's username/password sign-on form instead of content, which is why this profile is recorded as
-`gated / customer-only-docs`: the contract exists, but only customers can read it.
+### Published properties
 
-Contract discovery run 2026-09-12 against `agilesoda.ai`, `www.agilesoda.ai` and `docs.agilesoda.ai`:
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Probe | Result |
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Agilesoda Domain Security](https://apis.io/security/agilesoda/agilesoda-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Agilesoda Plans Pricing](https://apis.io/plans/agilesoda/agilesoda-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Agilesoda Rate Limits](https://apis.io/rate-limits/agilesoda/agilesoda-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://agilesoda.ai/)
+- [Documentation](http://docs.agilesoda.ai/agiledocs_ko)
+- [Support](https://agilesoda.ai/contact)
+- [GitHub](https://github.com/AgileSoda)
+
+## API Evangelist rating
+
+**Kin Score 6.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/v1/openapi.json`, `/api-docs`, `/v2/api-docs`, `/docs`, `/redoc`, `/rapidoc`, `/swagger-ui.html`, `/api/openapi.json` | 404 on every host |
-| `/graphql` introspection | 404 |
-| `/mcp`, `/.well-known/mcp.json` | 404 |
-| `/.well-known/agent-card.json`, `/.well-known/agent.json` | 404 — no agent card, so none is authored |
-| Named `/.well-known/` + `/apis.json` path list | 404 on every path, every host (see `well-known/`) |
-| npm / PyPI / crates.io / GitHub org | no first-party SDK published |
-| Pricing page | `https://agilesoda.ai/pricing` → 404 |
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 0.0 |
 
-One security note worth passing on: `docs.agilesoda.ai` has port 443 closed and serves the portal —
-including its credential login form — only over plaintext HTTP. Recorded in
-`security/agilesoda-domain-security.yml`.
+**Agent readiness 2.5** — human-only
 
-## Links
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-- Website — https://agilesoda.ai/
-- Documentation portal — http://docs.agilesoda.ai/agiledocs_ko
-- GitHub organization — https://github.com/AgileSoda
-- Contact / demo request — https://agilesoda.ai/contact
-- Investor relations — https://agilesoda.ai/ir
-- LinkedIn — https://www.linkedin.com/company/agilesoda
+**Regulatory alignment 4.9** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/agilesoda/](https://apis.io/providers/agilesoda/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AgileSoDA: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/agilesoda/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
